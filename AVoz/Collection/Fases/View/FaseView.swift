@@ -16,7 +16,7 @@ struct FaseView: View {
                 List(viewModel.fase, id: \.self) { fase in
                     NavigationLink(
                         fase.description,
-                        destination: YearView(viewModel: YearViewModel(yearIndex: fase.hashValue))
+                        destination: YearView(viewModel: YearViewModel(yearIndex: fase.description))
                     )
                 }
                 .navigationTitle("A Voz")

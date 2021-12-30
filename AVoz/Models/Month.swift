@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Month {
+struct Month: Codable, Hashable {
     var title: String?
     var image: String?
     var date: String?

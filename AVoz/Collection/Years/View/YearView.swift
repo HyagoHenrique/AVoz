@@ -12,7 +12,10 @@ struct YearView: View {
     var body: some View {
         VStack {
             List(viewModel.years, id: \.self) { years in
-                NavigationLink(years.description, destination: AboutView())
+                NavigationLink(
+                    years.description,
+                    destination: MonthView(viewModel: MonthViewModel(year: years.description))
+                )
             }
             .navigationTitle("Anos")
         }
@@ -21,6 +24,6 @@ struct YearView: View {
 
 struct YearView_Previews: PreviewProvider {
     static var previews: some View {
-        YearView(viewModel: YearViewModel(yearIndex: 0))
+        YearView(viewModel: YearViewModel(yearIndex: ""))
     }
 }
