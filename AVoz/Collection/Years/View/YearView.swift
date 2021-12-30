@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct YearView: View {
-    
    @ObservedObject var viewModel: YearViewModel
-    
     var body: some View {
         VStack {
             List(viewModel.years, id: \.self) { years in

@@ -9,11 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @State var barItemSelected: Int = 1
-    
     init() {
         UITabBar.appearance().backgroundColor = UIColor.systemGray4
     }
-    
     var body: some View {
         VStack {
             TabView(selection: $barItemSelected) {
@@ -32,7 +30,6 @@ struct HomeView: View {
                         Label("Acervo", systemImage: "doc.on.doc.fill")
                     }
                     .tag(2)
-                
             }
         }
     }

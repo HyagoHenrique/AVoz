@@ -9,6 +9,5 @@ import Foundation
 import SwiftUI
 
 final class FaseViewModel: ObservableObject {
-    
    @Published var fase: [String] = ["Primeira Fase", "Segunda Fase I", "Segunda Fase II"]
 }
