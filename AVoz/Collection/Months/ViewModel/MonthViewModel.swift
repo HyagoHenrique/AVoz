@@ -19,7 +19,7 @@ final class MonthViewModel: ObservableObject {
         self.faseSelected = faseIndex
         self.yearSelected = yearIndex
     }
-    
+    // - MARK: - Methods
     func loadNewsPaper() {
         self.loading = true
         database.collection(
@@ -36,16 +36,27 @@ final class MonthViewModel: ObservableObject {
                     let month = document["month"] as? String
                     let edition = document["edition"] as? String
                     let year = document["year"] as? String
-                    self.newPaper.append(NewsPaper(
-                        id: id,
-                        year: year,
-                        edition: edition,
-                        newspaper: newspaper,
-                        month: month
-                    ))
+                    let image = document["image"] as? String
+                    self.newPaper.append(
+                        NewsPaper(
+                            id: id,
+                            year: year,
+                            edition: edition,
+                            newspaper: newspaper,
+                            month: month,
+                            image: image
+                        )
+                    )
                 }
                 self.loading = false
             }
         }
+    }
+    func destroyData() {
+        self.newPaper = []
+    }
+    func getNewsPaper(with id: String) {
+        guard let PDFurl = URL(string: id) else { return self.showError = true }
+        UIApplication.shared.open(PDFurl)
     }
 }

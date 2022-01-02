@@ -13,7 +13,7 @@ final class FaseViewModel: ObservableObject {
     @Published var loading: Bool = false
     @Published var showError: Bool = false
     private let database = Firestore.firestore()
-    //MARK: - Methods    
+    // - MARK: - Methods
     func loadPeriods() {
         self.loading = true
         database.collection("collection").getDocuments { (querySnapshot, error) in

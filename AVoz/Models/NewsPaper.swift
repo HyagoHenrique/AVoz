@@ -13,4 +13,5 @@ struct NewsPaper {
     var edition: String?
     var newspaper: String?
     var month: String?
+    var image: String?
 }
