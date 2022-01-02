@@ -12,12 +12,13 @@ struct YearView: View {
     var body: some View {
         ZStack {
             VStack {
-                List(viewModel.years, id: \.self) { years in
+                List(viewModel.years, id: \.name) { name, year in
                     NavigationLink(
-                        years?.description ?? "",
+                        year ?? "",
                         destination: MonthView(
                             viewModel: MonthViewModel(
-                                year: years?.description ?? ""
+                                faseIndex: viewModel.faseIndex ?? "",
+                                yearIndex: name
                             )
                         )
                     )

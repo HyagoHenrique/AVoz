@@ -13,7 +13,7 @@ final class YearViewModel: ObservableObject {
     @Published var loading: Bool = false
     @Published var showError: Bool = false
     @Published var showMonth: Bool = false
-    @Published var years: [String?] = []
+    @Published var years: [(name: String, year: String?)] = []
     private let database = Firestore.firestore()
     init (faseIndex: String) {
         self.faseIndex = faseIndex
@@ -27,7 +27,7 @@ final class YearViewModel: ObservableObject {
                 self.showError = true
             } else {
                 for document in querySnapshot!.documents {
-                    self.years.append(document.get("year") as? String)
+                    self.years.append((name: document.documentID, year: document.get("year") as? String))
                 }
                 self.loading = false
             }

@@ -14,37 +14,33 @@ struct MonthView: View {
         GridItem(.flexible())
     ]
     var body: some View {
-        VStack {
-            Text("Vesh")
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 50) {
+                ForEach(viewModel.newPaper, id:\.id) { news in
+                    CardMonth(year: news.year ?? "" , month: news.month ?? "", edicao: news.edition ?? "")
+                }
+            }
+            .padding(.horizontal)
         }
-//        ScrollView {
-//            LazyVGrid(columns: columns, spacing: 50) {
-//                ForEach(viewModel.month, id: \.self) { month in
-//                    CardMonth(image: month.image ?? "", date: month.date ?? "", edicao: month.title ?? "")
-//                }
-//            }
-//            .padding(.horizontal)
-//        }
-//        .onAppear {
-//            viewModel.loadNewspaperByYear()
-//        }
+        .onAppear {
+            viewModel.loadNewsPaper()
+        }
     }
 }
 
 private struct CardMonth: View {
-    var image: String
-    var date: String
+    var year: String
+    var month: String
     var edicao: String
     var body: some View {
         VStack {
-            Image(systemName: image)
-            Text("\(edicao) - \(date)")
+            Text("\(edicao) - \(month) de \(year)")
         }
     }
 }
 
 struct MonthView_Previews: PreviewProvider {
     static var previews: some View {
-        MonthView(viewModel: MonthViewModel(year: ""))
+        MonthView(viewModel: MonthViewModel(faseIndex: "", yearIndex: ""))
     }
 }

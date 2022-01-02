@@ -9,11 +9,43 @@ import Foundation
 import FirebaseFirestore
 
 final class MonthViewModel: ObservableObject {
-    @Published var month = [ "oi", "mes", "garai"]
+    @Published var loading: Bool = false
+    @Published var showError: Bool = false
+    @Published var newPaper: [NewsPaper] = []
     private var yearSelected: String?
-    init(year: String) {
-        self.yearSelected = year
+    private var faseSelected: String?
+    private let database = Firestore.firestore()
+    init(faseIndex: String?, yearIndex: String?) {
+        self.faseSelected = faseIndex
+        self.yearSelected = yearIndex
     }
-    func getNewspaperByMonth(with month: String) { print(month) }
-    func loadNewspaperByYear() { print(yearSelected ?? "") }
+    
+    func loadNewsPaper() {
+        self.loading = true
+        database.collection(
+            "collection/\(faseSelected ?? "")/years/\(yearSelected ?? "")/newspaper/"
+        ).getDocuments { (querySnapshot, error) in
+            if let errorCall = error {
+                print("Error getting documents: \(errorCall)")
+                self.loading = false
+                self.showError = true
+            } else {
+                for document in querySnapshot!.documents {
+                    let id = document.documentID
+                    let newspaper = document["newspaper"] as? String
+                    let month = document["month"] as? String
+                    let edition = document["edition"] as? String
+                    let year = document["year"] as? String
+                    self.newPaper.append(NewsPaper(
+                        id: id,
+                        year: year,
+                        edition: edition,
+                        newspaper: newspaper,
+                        month: month
+                    ))
+                }
+                self.loading = false
+            }
+        }
+    }
 }
