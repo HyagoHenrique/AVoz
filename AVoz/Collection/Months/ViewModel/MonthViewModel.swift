@@ -9,19 +9,11 @@ import Foundation
 import FirebaseFirestore
 
 final class MonthViewModel: ObservableObject {
-    @Published var month: [Month] = [
-        Month(title: "001", image: "cart", date: "Dezembro"),
-        Month(title: "002", image: "bag", date: "Janeiro"),
-        Month(title: "003", image: "circle.fill", date: "Fevereiro")
-    ]
+    @Published var month = [ "oi", "mes", "garai"]
     private var yearSelected: String?
     init(year: String) {
         self.yearSelected = year
     }
-    func getNewspaperByMonth(with month: String) {
-        print(month)
-    }
-    func loadNewspaperByYear() {
-        print(yearSelected ?? "")
-    }
+    func getNewspaperByMonth(with month: String) { print(month) }
+    func loadNewspaperByYear() { print(yearSelected ?? "") }
 }

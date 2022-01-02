@@ -14,17 +14,20 @@ struct MonthView: View {
         GridItem(.flexible())
     ]
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 50) {
-                ForEach(viewModel.month, id: \.self) { month in
-                    CardMonth(image: month.image ?? "", date: month.date ?? "", edicao: month.title ?? "")
-                }
-            }
-            .padding(.horizontal)
+        VStack {
+            Text("Vesh")
         }
-        .onAppear {
-            viewModel.loadNewspaperByYear()
-        }
+//        ScrollView {
+//            LazyVGrid(columns: columns, spacing: 50) {
+//                ForEach(viewModel.month, id: \.self) { month in
+//                    CardMonth(image: month.image ?? "", date: month.date ?? "", edicao: month.title ?? "")
+//                }
+//            }
+//            .padding(.horizontal)
+//        }
+//        .onAppear {
+//            viewModel.loadNewspaperByYear()
+//        }
     }
 }
 
