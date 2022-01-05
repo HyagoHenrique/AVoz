@@ -16,5 +16,5 @@ O projeto é idealizado por mim, por ver que poderia contrubir com o jornal e co
 
 É um projeto OpenSource.
 
-Esse projeto é construido com Cocoapods, SwiftLint e Firebase.
+Esse projeto é construido com Cocoapods, SwiftLint, SDWebImageSwift e Firebase.
 Como ele é feito com Firebase é necessario adicionar o arquivo GoogleService-Info.plist para conseguir rodar ele.
