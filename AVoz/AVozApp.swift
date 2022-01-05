@@ -22,6 +22,7 @@ struct AVozApp: App {
         UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
         UITabBar.appearance().backgroundColor = .white
         UITabBar.appearance().unselectedItemTintColor = .black
+        UIWindow.appearance().overrideUserInterfaceStyle = .light
     }
     var body: some Scene {
         WindowGroup {
