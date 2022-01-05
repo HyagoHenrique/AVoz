@@ -32,6 +32,7 @@ struct MonthView: View {
                 }
                 .padding(.horizontal)
             }
+            .padding(.top)
             .opacity(viewModel.loading ? 0 : 1)
             ProgressView()
                 .ignoresSafeArea()
@@ -39,6 +40,7 @@ struct MonthView: View {
                 .opacity(viewModel.loading ? 1 : 0)
         }
         .onAppear {
+            viewModel.destroyData()
             viewModel.loadNewsPaper()
         }
         .onDisappear {

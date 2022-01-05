@@ -9,11 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State var barItemSelected: Int = 1
-    init() {
-        UITabBar.appearance().backgroundColor = UIColor.systemGray4
-    }
     var body: some View {
-        VStack {
             TabView(selection: $barItemSelected) {
                 AboutView()
                     .tabItem {
@@ -31,7 +27,6 @@ struct HomeView: View {
                     }
                     .tag(2)
             }
-        }
     }
 }
 

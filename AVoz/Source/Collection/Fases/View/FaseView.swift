@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct FaseView: View {
-
     @ObservedObject var viewModel: FaseViewModel
     var body: some View {
         ZStack {
@@ -24,7 +23,8 @@ struct FaseView: View {
                             )
                         )
                     }
-                    .navigationTitle("A Voz")
+                    .navigationTitle("Períodos")
+                    .navigationBarTitleDisplayMode(.inline)
                 }
             }
             .opacity(viewModel.loading ? 0 : 1)
@@ -34,6 +34,7 @@ struct FaseView: View {
                 .opacity(viewModel.loading ? 1 : 0)
         }
         .onAppear {
+            viewModel.destroyData()
             viewModel.loadPeriods()
         }
         .onDisappear {

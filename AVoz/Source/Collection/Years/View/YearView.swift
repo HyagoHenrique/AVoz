@@ -8,20 +8,22 @@
 import SwiftUI
 
 struct YearView: View {
-   @ObservedObject var viewModel: YearViewModel
+    @ObservedObject var viewModel: YearViewModel
     var body: some View {
         ZStack {
             VStack {
-                List(viewModel.years, id: \.name) { name, year in
-                    NavigationLink(
-                        year ?? "",
-                        destination: MonthView(
-                            viewModel: MonthViewModel(
-                                faseIndex: viewModel.faseIndex ?? "",
-                                yearIndex: name
+                List {
+                    ForEach(viewModel.years, id: \.name) { name, year in
+                        NavigationLink(
+                            year ?? "",
+                            destination: MonthView(
+                                viewModel: MonthViewModel(
+                                    faseIndex: viewModel.faseIndex ?? "",
+                                    yearIndex: name
+                                )
                             )
                         )
-                    )
+                    }
                 }
                 .navigationTitle("Anos")
             }.opacity(viewModel.loading ? 0 : 1)
