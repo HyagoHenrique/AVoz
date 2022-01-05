@@ -20,7 +20,6 @@
 		9A43ACAE277D4F5C00F32EA5 /* YearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43ACAD277D4F5C00F32EA5 /* YearViewModel.swift */; };
 		9A43ACB3277D55F900F32EA5 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43ACB2277D55F900F32EA5 /* MonthView.swift */; };
 		9A43ACB5277D578500F32EA5 /* MonthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43ACB4277D578500F32EA5 /* MonthViewModel.swift */; };
-		9A43ACBA277D5DC200F32EA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A43ACB9277D5DC200F32EA5 /* GoogleService-Info.plist */; };
 		9A4C75FA27851CB200CB62B3 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C75F927851CB200CB62B3 /* NavigationConfigurator.swift */; };
 		9AD1E4D82781343A00B17AC0 /* NewsPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1E4D72781343A00B17AC0 /* NewsPaper.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		9A43ACAD277D4F5C00F32EA5 /* YearViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearViewModel.swift; sourceTree = "<group>"; };
 		9A43ACB2277D55F900F32EA5 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		9A43ACB4277D578500F32EA5 /* MonthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthViewModel.swift; sourceTree = "<group>"; };
-		9A43ACB9277D5DC200F32EA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9A4C75F927851CB200CB62B3 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		9AD1E4D72781343A00B17AC0 /* NewsPaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPaper.swift; sourceTree = "<group>"; };
 		CAAEC75DBF9F7A9BA41C1C6E /* Pods-AVoz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVoz.release.xcconfig"; path = "Target Support Files/Pods-AVoz/Pods-AVoz.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			children = (
 				9A43AC81277D2A6700F32EA5 /* AVozApp.swift */,
 				9A43AC85277D2A6900F32EA5 /* Assets.xcassets */,
-				9A43ACB9277D5DC200F32EA5 /* GoogleService-Info.plist */,
 				9A4C75F627851C0500CB62B3 /* Components */,
 				9A43ACB6277D57AA00F32EA5 /* Models */,
 				9A4C75F527851BDF00CB62B3 /* Source */,
@@ -363,7 +360,6 @@
 			files = (
 				9A43AC89277D2A6900F32EA5 /* Preview Assets.xcassets in Resources */,
 				9A43AC86277D2A6900F32EA5 /* Assets.xcassets in Resources */,
-				9A43ACBA277D5DC200F32EA5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
