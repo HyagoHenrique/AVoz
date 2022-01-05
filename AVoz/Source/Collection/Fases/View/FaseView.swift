@@ -23,7 +23,7 @@ struct FaseView: View {
                             )
                         )
                     }
-                    .navigationTitle("Periodos")
+                    .navigationTitle("Períodos")
                     .navigationBarTitleDisplayMode(.inline)
                 }
             }
