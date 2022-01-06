@@ -32,6 +32,8 @@ struct MonthView: View {
                 }
                 .padding(.horizontal)
             }
+            .navigationTitle("Jornais")
+            .navigationBarTitleDisplayMode(.inline)
             .padding(.top)
             .opacity(viewModel.loading ? 0 : 1)
             ProgressView()
@@ -65,8 +67,9 @@ private struct CardMonth: View {
         VStack {
             AnimatedImage(url: URL(string: image))
                 .resizable()
-                .frame(width: 150, height: 150)
-            Text("\(edicao) - \(month) de \(year)")
+                .frame(width: 100, height: 130)
+            Text("\(edicao)")
+            Text("\(month) de \(year)")
         }
     }
 }
