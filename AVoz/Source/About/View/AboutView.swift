@@ -13,18 +13,16 @@ struct AboutView: View {
             ZStack(alignment: .topLeading) {
                 Color(UIColor.systemGray6)
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("A Voz")
-                            .font(.system(size: 32, weight: .bold, design: .rounded))
-                        
-                        Image(systemName: "cart")
+                    VStack(spacing: 10) {
+                        Image("AVOZ")
                             .resizable()
-                            .frame(height: 220)
-                            .padding(.top)
+                            .scaledToFill()
+                            .frame(height: 200)
                         // swiftlint:disable line_length
                         Text("No dia 3 de outubro de 1997, uma sexta-feira, durante a realização do evento Reencontro com a Arte, promovido pela Sociedade Bonfinense de Cultura, no Espaço Cultural Juvenal Tavares, era lançada a primeira edição do Jornal A Voz. \n\nO jornal nascia com um compromisso com a História – registrar algo do cotidiano de nossa cidade com vistas ao presente e ao futuro. Desde então, já se passaram mais de 20 anos e chegamos à 210ª edição (tivemos uma paralisação de mais ou menos três anos).")
                             .font(.system(size: 16, weight: .medium, design: .monospaced))
                             .padding(.top)
+                            .multilineTextAlignment(.center)
                         Text("Contatos")
                             .font(.system(size: 32, weight: .bold, design: .rounded))
                             .padding(.top)
