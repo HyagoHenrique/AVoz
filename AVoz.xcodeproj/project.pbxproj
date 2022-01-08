@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10D369EB5C99A638C0FE6AE5 /* Pods_AVoz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60775BF6F2F34628053BFC15 /* Pods_AVoz.framework */; };
 		9A43AC82277D2A6700F32EA5 /* AVozApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43AC81277D2A6700F32EA5 /* AVozApp.swift */; };
 		9A43AC86277D2A6900F32EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A43AC85277D2A6900F32EA5 /* Assets.xcassets */; };
 		9A43AC89277D2A6900F32EA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A43AC88277D2A6900F32EA5 /* Preview Assets.xcassets */; };
@@ -20,15 +19,16 @@
 		9A43ACAE277D4F5C00F32EA5 /* YearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43ACAD277D4F5C00F32EA5 /* YearViewModel.swift */; };
 		9A43ACB3277D55F900F32EA5 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43ACB2277D55F900F32EA5 /* MonthView.swift */; };
 		9A43ACB5277D578500F32EA5 /* MonthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43ACB4277D578500F32EA5 /* MonthViewModel.swift */; };
-		9A4C75FA27851CB200CB62B3 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C75F927851CB200CB62B3 /* NavigationConfigurator.swift */; };
 		9A4C75FC2785558400CB62B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A4C75FB2785558400CB62B3 /* GoogleService-Info.plist */; };
 		9AD1E4D82781343A00B17AC0 /* NewsPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1E4D72781343A00B17AC0 /* NewsPaper.swift */; };
+		D46F15B9F82CEAE730D097EE /* Pods_A_Voz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D50982BBCD12BFFCDE3D30 /* Pods_A_Voz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		60775BF6F2F34628053BFC15 /* Pods_AVoz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVoz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50DD2FA28E40138F92877AFA /* Pods-A Voz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A Voz.release.xcconfig"; path = "Target Support Files/Pods-A Voz/Pods-A Voz.release.xcconfig"; sourceTree = "<group>"; };
 		7E69E737008686F3E36B16E1 /* Pods-AVoz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVoz.debug.xcconfig"; path = "Target Support Files/Pods-AVoz/Pods-AVoz.debug.xcconfig"; sourceTree = "<group>"; };
-		9A43AC7E277D2A6700F32EA5 /* AVoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A5667F9AA60290CCB1D9F1A /* Pods-A Voz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A Voz.debug.xcconfig"; path = "Target Support Files/Pods-A Voz/Pods-A Voz.debug.xcconfig"; sourceTree = "<group>"; };
+		9A43AC7E277D2A6700F32EA5 /* A Voz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A Voz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A43AC81277D2A6700F32EA5 /* AVozApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVozApp.swift; sourceTree = "<group>"; };
 		9A43AC85277D2A6900F32EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A43AC88277D2A6900F32EA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -41,9 +41,9 @@
 		9A43ACAD277D4F5C00F32EA5 /* YearViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearViewModel.swift; sourceTree = "<group>"; };
 		9A43ACB2277D55F900F32EA5 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		9A43ACB4277D578500F32EA5 /* MonthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthViewModel.swift; sourceTree = "<group>"; };
-		9A4C75F927851CB200CB62B3 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		9A4C75FB2785558400CB62B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9AD1E4D72781343A00B17AC0 /* NewsPaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPaper.swift; sourceTree = "<group>"; };
+		A8D50982BBCD12BFFCDE3D30 /* Pods_A_Voz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_A_Voz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAEC75DBF9F7A9BA41C1C6E /* Pods-AVoz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVoz.release.xcconfig"; path = "Target Support Files/Pods-AVoz/Pods-AVoz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10D369EB5C99A638C0FE6AE5 /* Pods_AVoz.framework in Frameworks */,
+				D46F15B9F82CEAE730D097EE /* Pods_A_Voz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +72,7 @@
 		9A43AC7F277D2A6700F32EA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A43AC7E277D2A6700F32EA5 /* AVoz.app */,
+				9A43AC7E277D2A6700F32EA5 /* A Voz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,7 +278,6 @@
 		9A4C75F627851C0500CB62B3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9A4C75F927851CB200CB62B3 /* NavigationConfigurator.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -288,6 +287,8 @@
 			children = (
 				7E69E737008686F3E36B16E1 /* Pods-AVoz.debug.xcconfig */,
 				CAAEC75DBF9F7A9BA41C1C6E /* Pods-AVoz.release.xcconfig */,
+				8A5667F9AA60290CCB1D9F1A /* Pods-A Voz.debug.xcconfig */,
+				50DD2FA28E40138F92877AFA /* Pods-A Voz.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -295,7 +296,7 @@
 		E2E18132FEC31BC6A667D4CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60775BF6F2F34628053BFC15 /* Pods_AVoz.framework */,
+				A8D50982BBCD12BFFCDE3D30 /* Pods_A_Voz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -303,9 +304,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9A43AC7D277D2A6700F32EA5 /* AVoz */ = {
+		9A43AC7D277D2A6700F32EA5 /* A Voz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A43AC8C277D2A6900F32EA5 /* Build configuration list for PBXNativeTarget "AVoz" */;
+			buildConfigurationList = 9A43AC8C277D2A6900F32EA5 /* Build configuration list for PBXNativeTarget "A Voz" */;
 			buildPhases = (
 				32EE930458B9696A1534E9BD /* [CP] Check Pods Manifest.lock */,
 				9A43AC7A277D2A6700F32EA5 /* Sources */,
@@ -318,9 +319,9 @@
 			);
 			dependencies = (
 			);
-			name = AVoz;
+			name = "A Voz";
 			productName = AVoz;
-			productReference = 9A43AC7E277D2A6700F32EA5 /* AVoz.app */;
+			productReference = 9A43AC7E277D2A6700F32EA5 /* A Voz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -351,7 +352,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9A43AC7D277D2A6700F32EA5 /* AVoz */,
+				9A43AC7D277D2A6700F32EA5 /* A Voz */,
 			);
 		};
 /* End PBXProject section */
@@ -376,15 +377,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVoz/Pods-AVoz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-A Voz/Pods-A Voz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVoz/Pods-AVoz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-A Voz/Pods-A Voz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVoz/Pods-AVoz-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-A Voz/Pods-A Voz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		32EE930458B9696A1534E9BD /* [CP] Check Pods Manifest.lock */ = {
@@ -402,7 +403,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AVoz-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-A Voz-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -443,7 +444,6 @@
 				9A43ACA4277D3C0D00F32EA5 /* NewsView.swift in Sources */,
 				9A43ACB3277D55F900F32EA5 /* MonthView.swift in Sources */,
 				9AD1E4D82781343A00B17AC0 /* NewsPaper.swift in Sources */,
-				9A4C75FA27851CB200CB62B3 /* NavigationConfigurator.swift in Sources */,
 				9A43AC95277D2B2200F32EA5 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,7 +569,7 @@
 		};
 		9A43AC8D277D2A6900F32EA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E69E737008686F3E36B16E1 /* Pods-AVoz.debug.xcconfig */;
+			baseConfigurationReference = 8A5667F9AA60290CCB1D9F1A /* Pods-A Voz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -602,7 +602,7 @@
 		};
 		9A43AC8E277D2A6900F32EA5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAAEC75DBF9F7A9BA41C1C6E /* Pods-AVoz.release.xcconfig */;
+			baseConfigurationReference = 50DD2FA28E40138F92877AFA /* Pods-A Voz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -645,7 +645,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A43AC8C277D2A6900F32EA5 /* Build configuration list for PBXNativeTarget "AVoz" */ = {
+		9A43AC8C277D2A6900F32EA5 /* Build configuration list for PBXNativeTarget "A Voz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A43AC8D277D2A6900F32EA5 /* Debug */,

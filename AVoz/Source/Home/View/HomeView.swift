@@ -27,6 +27,7 @@ struct HomeView: View {
                     }
                     .tag(2)
             }
+            .accentColor(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)))
     }
 }
 
