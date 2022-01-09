@@ -11,9 +11,11 @@ import AlertToast
 
 struct AboutView: View {
     
-    @State var textPhone1: String = "(62) 3332-1559"
-    @State var textPhone2: String = "(62) 99943-6200"
+    @ObservedObject var viewModel: AboutViewModel
+    
     @State var showToast: Bool =  false
+    @State var message: String = ""
+    private let phone: String = "(62) 9 9943-6200"
     
     var body: some View {
         NavigationView {
@@ -23,10 +25,10 @@ struct AboutView: View {
                     VStack {
                         Image("AVOZ")
                             .resizable()
-                            .scaledToFill()
-                            .frame(height: 200)
+                            .scaledToFit()
+                            .frame(height: 150)
                         Text("Conectando passado, presente e futuro!")
-                            .font(.system(size: 28, weight: .bold))
+                            .font(.system(size: 18, weight: .bold))
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)))
                         
@@ -35,35 +37,57 @@ struct AboutView: View {
                             .font(.system(size: 16, weight: .medium))
                             .padding(.top)
                             .multilineTextAlignment(.center)
-                        Text("Contatos")
-                            .font(.system(size: 32, weight: .bold))
+                        Text("Fale com a redação")
+                            .font(.system(size: 28, weight: .bold))
                             .padding(.top)
                             .foregroundColor(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)))
-                        Text("WhatsApp: \(textPhone1)")
-                            .font(.system(size: 16, weight: .medium))
-                            .multilineTextAlignment(.center)
-                            .onTapGesture(count: 2) {
-                                UIPasteboard.general.setValue(textPhone1, forPasteboardType: kUTTypePlainText as String)
-                                showToast.toggle()
-                            }
-                        Text("Telefone: \(textPhone2)")
-                            .font(.system(size: 16, weight: .medium))
-                            .multilineTextAlignment(.center)
-                            .onTapGesture(count: 2) {
-                                UIPasteboard.general.setValue(textPhone2, forPasteboardType: kUTTypePlainText as String)
-                                showToast.toggle()
-                                
-                            }
-                        Text("E-mail:   contato@avozweb.com.br")
-                            .font(.system(size: 16, weight: .medium))
-                            .multilineTextAlignment(.center)
-                        Text("Endereço")
-                            .foregroundColor(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)))
-                            .font(.system(size: 32, weight: .bold))
-                            .padding(.top)
-                        Text("Rua: Ivo de Paiva Lenza \nQD. 11, LT. 29, Setor Sul \nCEP: 75180-000 \nSilvânia – Goiás")
-                            .font(.system(size: 16, weight: .medium))
-                            .multilineTextAlignment(.center)
+                        HStack {
+                            Image("whatsapp")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .onTapGesture {
+                                    viewModel.launchWhatsapp()
+                                }
+                            Text("\(viewModel.whatsApp)")
+                                .font(.system(size: 16, weight: .medium))
+                                .multilineTextAlignment(.center)
+                                .onTapGesture(count: 2) {
+                                    UIPasteboard.general.setValue(viewModel.whatsApp, forPasteboardType: kUTTypePlainText as String)
+                                    message = "Número Copiado"
+                                    showToast.toggle()
+                                }
+                        }
+                        HStack {
+                            Image(systemName: "phone.fill")
+                                .frame(width: 30, height: 30)
+                                .onTapGesture {
+                                    viewModel.launchPhone()
+                                }
+                            Text("\(phone)")
+                                .font(.system(size: 16, weight: .medium))
+                                .multilineTextAlignment(.center)
+                                .onTapGesture(count: 2) {
+                                    UIPasteboard.general.setValue(phone, forPasteboardType: kUTTypePlainText as String)
+                                    message = "Número Copiado"
+                                    showToast.toggle()
+                                    
+                                }
+                        }
+                        HStack {
+                            Image(systemName: "envelope.fill")
+                                .frame(width: 30, height: 30)
+                                .onTapGesture {
+                                    viewModel.launchEmail()
+                                }
+                            Text(verbatim: viewModel.email)
+                                .font(.system(size: 16, weight: .medium))
+                                .multilineTextAlignment(.center)
+                                .onTapGesture(count: 2) {
+                                    UIPasteboard.general.setValue(viewModel.email, forPasteboardType: kUTTypePlainText as String)
+                                    message = "Email Copiado"
+                                    showToast.toggle()
+                                }
+                        }
                         // swiftlint:enable line_length
                     }
                     .padding()
@@ -75,7 +99,7 @@ struct AboutView: View {
         .toast(isPresenting: $showToast, duration: 2, tapToDismiss: true, alert: {
             AlertToast(
                 displayMode: .hud,
-                type: .regular, title: "Número Copiado!",
+                type: .regular, title: message,
                 style: .style(
                     backgroundColor: .black,
                               titleColor: .white
@@ -87,6 +111,6 @@ struct AboutView: View {
 
 struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
-        AboutView()
+        AboutView(viewModel: AboutViewModel())
     }
 }

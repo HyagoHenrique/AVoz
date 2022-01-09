@@ -11,21 +11,26 @@ struct HomeView: View {
     @State var barItemSelected: Int = 1
     var body: some View {
             TabView(selection: $barItemSelected) {
-                AboutView()
+                AboutView(viewModel: AboutViewModel())
                     .tabItem {
                         Label("Sobre", systemImage: "info.circle.fill")
                     }
                     .tag(0)
                 NewsView()
                     .tabItem {
-                        Label("Notícias", systemImage: "newspaper.fill")
+                        Label("Edição Online", systemImage: "newspaper.fill")
                     }
                     .tag(1)
+                ContributorsView()
+                    .tabItem {
+                        Label("Colaboradores", systemImage: "person.3")
+                    }
+                    .tag(2)
                 FaseView(viewModel: FaseViewModel())
                     .tabItem {
                         Label("Acervo", systemImage: "doc.on.doc.fill")
                     }
-                    .tag(2)
+                    .tag(3)
             }
             .accentColor(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)))
     }

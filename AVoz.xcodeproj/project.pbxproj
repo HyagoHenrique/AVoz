@@ -21,6 +21,9 @@
 		9A43ACB5277D578500F32EA5 /* MonthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43ACB4277D578500F32EA5 /* MonthViewModel.swift */; };
 		9A4C75FC2785558400CB62B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A4C75FB2785558400CB62B3 /* GoogleService-Info.plist */; };
 		9AD1E4D82781343A00B17AC0 /* NewsPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1E4D72781343A00B17AC0 /* NewsPaper.swift */; };
+		9AFED1B5278B78F5007802B9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFED1B4278B78F5007802B9 /* Launch Screen.storyboard */; };
+		9AFED1BA278B7ACA007802B9 /* ContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFED1B9278B7ACA007802B9 /* ContributorsView.swift */; };
+		9AFED1BC278B7E0A007802B9 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFED1BB278B7E09007802B9 /* AboutViewModel.swift */; };
 		D46F15B9F82CEAE730D097EE /* Pods_A_Voz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D50982BBCD12BFFCDE3D30 /* Pods_A_Voz.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		9A43ACB4277D578500F32EA5 /* MonthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthViewModel.swift; sourceTree = "<group>"; };
 		9A4C75FB2785558400CB62B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9AD1E4D72781343A00B17AC0 /* NewsPaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPaper.swift; sourceTree = "<group>"; };
+		9AFED1B4278B78F5007802B9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9AFED1B9278B7ACA007802B9 /* ContributorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsView.swift; sourceTree = "<group>"; };
+		9AFED1BB278B7E09007802B9 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
 		A8D50982BBCD12BFFCDE3D30 /* Pods_A_Voz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_A_Voz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAEC75DBF9F7A9BA41C1C6E /* Pods-AVoz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVoz.release.xcconfig"; path = "Target Support Files/Pods-AVoz/Pods-AVoz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +93,7 @@
 				9A43ACB6277D57AA00F32EA5 /* Models */,
 				9A4C75F527851BDF00CB62B3 /* Source */,
 				9A43AC87277D2A6900F32EA5 /* Preview Content */,
+				9AFED1B4278B78F5007802B9 /* Launch Screen.storyboard */,
 			);
 			path = AVoz;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 		9A43AC98277D2EC800F32EA5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9AFED1BB278B7E09007802B9 /* AboutViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -267,6 +275,7 @@
 		9A4C75F527851BDF00CB62B3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				9AFED1B6278B7A8F007802B9 /* Contributors */,
 				9A43AC8F277D2A7600F32EA5 /* Home */,
 				9A43AC96277D2EB600F32EA5 /* About */,
 				9A43ACA0277D3BDF00F32EA5 /* News */,
@@ -280,6 +289,30 @@
 			children = (
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		9AFED1B6278B7A8F007802B9 /* Contributors */ = {
+			isa = PBXGroup;
+			children = (
+				9AFED1B8278B7AB9007802B9 /* ViewModel */,
+				9AFED1B7278B7AAA007802B9 /* View */,
+			);
+			path = Contributors;
+			sourceTree = "<group>";
+		};
+		9AFED1B7278B7AAA007802B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9AFED1B9278B7ACA007802B9 /* ContributorsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9AFED1B8278B7AB9007802B9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DA8407BE51C5CC4A9762DB36 /* Pods */ = {
@@ -364,6 +397,7 @@
 			files = (
 				9A43AC89277D2A6900F32EA5 /* Preview Assets.xcassets in Resources */,
 				9A43AC86277D2A6900F32EA5 /* Assets.xcassets in Resources */,
+				9AFED1B5278B78F5007802B9 /* Launch Screen.storyboard in Resources */,
 				9A4C75FC2785558400CB62B3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A43ACA6277D4D0900F32EA5 /* FaseViewModel.swift in Sources */,
+				9AFED1BA278B7ACA007802B9 /* ContributorsView.swift in Sources */,
 				9A43AC82277D2A6700F32EA5 /* AVozApp.swift in Sources */,
 				9A43AC9A277D2ED600F32EA5 /* AboutView.swift in Sources */,
 				9A43ACB5277D578500F32EA5 /* MonthViewModel.swift in Sources */,
@@ -445,6 +480,7 @@
 				9A43ACB3277D55F900F32EA5 /* MonthView.swift in Sources */,
 				9AD1E4D82781343A00B17AC0 /* NewsPaper.swift in Sources */,
 				9A43AC95277D2B2200F32EA5 /* HomeView.swift in Sources */,
+				9AFED1BC278B7E0A007802B9 /* AboutViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,13 +615,14 @@
 				DEVELOPMENT_TEAM = GFA6FPM6N8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "A-Voz-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Ligth;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -612,13 +649,14 @@
 				DEVELOPMENT_TEAM = GFA6FPM6N8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "A-Voz-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Ligth;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

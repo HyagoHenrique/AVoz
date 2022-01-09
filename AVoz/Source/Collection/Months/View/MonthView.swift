@@ -16,8 +16,9 @@ struct MonthView: View {
     ]
     var body: some View {
         ZStack {
+            Color(UIColor.systemGray6)
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 50) {
+                LazyVGrid(columns: columns, spacing: 30) {
                     ForEach(viewModel.newPaper, id:\.id) { news in
                         CardMonth(
                             year: news.year ?? "",
@@ -67,7 +68,9 @@ private struct CardMonth: View {
         VStack {
             AnimatedImage(url: URL(string: image))
                 .resizable()
-                .frame(width: 100, height: 130)
+                .frame(width: 150, height: 180)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
             Text("\(edicao)")
             Text("\(month) de \(year)")
         }
