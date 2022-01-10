@@ -1,17 +1,19 @@
 //
-//  NewsPaper.swift
+//  Newspaper.swift
 //  AVoz
 //
 //  Created by Hyago Henrique on 01/01/22.
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
-struct NewsPaper {
-    var id: String?
-    var year: String?
-    var edition: String?
-    var newspaper: String?
-    var month: String?
+struct Newspaper: Codable, Identifiable {
+    @DocumentID var id: String?
+    var pdfURL: String?
     var image: String?
+    var edition: Int?
+    var year: String?
+    var month: String?
 }

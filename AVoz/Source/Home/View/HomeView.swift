@@ -26,7 +26,7 @@ struct HomeView: View {
                         Label("Colaboradores", systemImage: "person.3")
                     }
                     .tag(2)
-                FaseView(viewModel: FaseViewModel())
+                PhaseView(viewModel: PhaseViewModel())
                     .tabItem {
                         Label("Acervo", systemImage: "doc.on.doc.fill")
                     }
