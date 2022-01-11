@@ -10,7 +10,8 @@ import FirebaseFirestore
 
 final class NewspaperViewModel: ObservableObject {
     
-    @Published var isLoading: Bool = true
+    @Published var showToast: Bool = false
+    @Published var isLoading: Bool = false
     private var database = Firestore.firestore()
     var phase: String
     var newspaper: [Newspaper] = []
@@ -22,9 +23,12 @@ final class NewspaperViewModel: ObservableObject {
     }
     
     func loadData() {
+        isLoading = false
         database.collection(phase).order(by: "edition").addSnapshotListener { (querySnapshot, error) in
             if let hasError = error {
                 print(hasError)
+                self.isLoading = false
+                self.showToast = true
             }
             if let querySnapshot = querySnapshot {
                 self.newspaper = querySnapshot.documents.compactMap { document -> Newspaper? in

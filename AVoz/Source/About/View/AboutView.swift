@@ -102,7 +102,7 @@ struct AboutView: View {
                 type: .regular, title: message,
                 style: .style(
                     backgroundColor: .black,
-                              titleColor: .white
+                    titleColor: .white
                 )
             )
         })
