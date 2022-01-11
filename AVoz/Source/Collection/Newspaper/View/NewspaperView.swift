@@ -31,10 +31,10 @@ struct NewspaperView: View {
                                             edicao: String(newspaper.edition ?? 0),
                                             image: newspaper.image ?? ""
                                         )
-                                            .environmentObject(viewModel)
-                                            .onTapGesture {
-                                                viewModel.getPDFURL(with: newspaper.pdfURL ?? "")
-                                            }
+                                        .environmentObject(viewModel)
+                                        .onTapGesture {
+                                            viewModel.getPDFURL(with: newspaper.pdfURL ?? "")
+                                        }
                                     }
                                 }
                             }
@@ -55,7 +55,7 @@ struct NewspaperView: View {
         .onDisappear {
             viewModel.destroyData()
         }
-        .toast(isPresenting: $viewModel.showToast, duration: 2, tapToDismiss: true, alert: {
+        .toast(isPresenting: $viewModel.showToast, duration: 2, tapToDismiss: true) {
             AlertToast(
                 displayMode: .banner(.slide),
                 type: .error(.red), title: viewModel.message,
@@ -64,7 +64,7 @@ struct NewspaperView: View {
                     titleColor: .white
                 )
             )
-        })
+        }
     }
 }
 
