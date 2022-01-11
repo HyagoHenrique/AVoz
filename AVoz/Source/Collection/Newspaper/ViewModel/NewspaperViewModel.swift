@@ -28,7 +28,7 @@ final class NewspaperViewModel: ObservableObject {
         database.collection(phase).order(by: "edition").addSnapshotListener { (querySnapshot, error) in
             if let hasError = error {
                 print(hasError)
-                self.message = "Erro ao carregar alguns elementos, por favor tente mais tarde!"
+                self.message = "Erro ao carregar elementos, por favor tente mais tarde!"
                 self.isLoading = false
                 self.showToast = true
             }
