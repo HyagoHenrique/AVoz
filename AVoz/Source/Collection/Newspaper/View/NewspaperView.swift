@@ -82,7 +82,7 @@ private struct CardNewspaper: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
                 }, failure: { _, _ in
-                    Text("Erro: Imagem não carregada")
+                    Text("Erro: Não foi possível carregar imagem.")
                         .frame(width: 150, height: 180)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
