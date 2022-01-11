@@ -12,6 +12,7 @@ final class NewspaperViewModel: ObservableObject {
     
     @Published var showToast: Bool = false
     @Published var isLoading: Bool = false
+    @Published var message: String = ""
     private var database = Firestore.firestore()
     var phase: String
     var newspaper: [Newspaper] = []
@@ -27,6 +28,7 @@ final class NewspaperViewModel: ObservableObject {
         database.collection(phase).order(by: "edition").addSnapshotListener { (querySnapshot, error) in
             if let hasError = error {
                 print(hasError)
+                self.message = "Erro ao carregar alguns elementos, por favor tente mais tarde!"
                 self.isLoading = false
                 self.showToast = true
             }
@@ -49,9 +51,15 @@ final class NewspaperViewModel: ObservableObject {
         newspaper.removeAll()
         yearsSet.removeAll()
         years.removeAll()
+        message = ""
     }
     
     func getPDFURL(with pdfURL: String) {
-        
+        guard let urlPDF = URL(string: pdfURL) else {
+            self.message = "Erro ao abrir pdf, tente mais tarde."
+            self.showToast = true
+            return
+        }
+        UIApplication.shared.open(urlPDF)
     }
 }

@@ -16,8 +16,6 @@ struct NewspaperView: View {
         GridItem(.flexible())
     ]
     
-    var message: String = "Erro ao carregar alguns elementos, por favor tente mais tarde!"
-    
     var body: some View {
         VStack {
             if !viewModel.isLoading {
@@ -60,7 +58,7 @@ struct NewspaperView: View {
         .toast(isPresenting: $viewModel.showToast, duration: 2, tapToDismiss: true, alert: {
             AlertToast(
                 displayMode: .banner(.slide),
-                type: .error(.red), title: message,
+                type: .error(.red), title: viewModel.message,
                 style: .style(
                     backgroundColor: .black,
                     titleColor: .white
