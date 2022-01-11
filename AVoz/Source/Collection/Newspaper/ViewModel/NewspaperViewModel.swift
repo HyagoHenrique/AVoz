@@ -56,7 +56,7 @@ final class NewspaperViewModel: ObservableObject {
     
     func getPDFURL(with pdfURL: String) {
         guard let urlPDF = URL(string: pdfURL) else {
-            self.message = "Erro ao abrir pdf, tente mais tarde."
+            self.message = "Erro ao abrir pdf, por favor tente mais tarde."
             self.showToast = true
             return
         }
