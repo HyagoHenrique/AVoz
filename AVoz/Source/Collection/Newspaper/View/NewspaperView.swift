@@ -77,7 +77,7 @@ private struct CardNewspaper: View {
         VStack {
             if let urlImage = URL(string: image) {
                 URLImage(url: urlImage, inProgress: { _ in
-                    Text("Carregando...")
+                    Text("Carregando..")
                         .frame(width: 150, height: 180)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
