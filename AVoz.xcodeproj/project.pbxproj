@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A016651278E7E4A004EDAF2 /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 9A016650278E7E4A004EDAF2 /* ACarousel */; };
 		9A43AC82277D2A6700F32EA5 /* AVozApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43AC81277D2A6700F32EA5 /* AVozApp.swift */; };
 		9A43AC86277D2A6900F32EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A43AC85277D2A6900F32EA5 /* Assets.xcassets */; };
 		9A43AC89277D2A6900F32EA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A43AC88277D2A6900F32EA5 /* Preview Assets.xcassets */; };
@@ -27,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		50DD2FA28E40138F92877AFA /* Pods-A Voz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A Voz.release.xcconfig"; path = "Target Support Files/Pods-A Voz/Pods-A Voz.release.xcconfig"; sourceTree = "<group>"; };
-		7E69E737008686F3E36B16E1 /* Pods-AVoz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVoz.debug.xcconfig"; path = "Target Support Files/Pods-AVoz/Pods-AVoz.debug.xcconfig"; sourceTree = "<group>"; };
 		8A5667F9AA60290CCB1D9F1A /* Pods-A Voz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A Voz.debug.xcconfig"; path = "Target Support Files/Pods-A Voz/Pods-A Voz.debug.xcconfig"; sourceTree = "<group>"; };
 		9A43AC7E277D2A6700F32EA5 /* A Voz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A Voz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A43AC81277D2A6700F32EA5 /* AVozApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVozApp.swift; sourceTree = "<group>"; };
@@ -46,7 +46,6 @@
 		9AFED1B9278B7ACA007802B9 /* ContributorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsView.swift; sourceTree = "<group>"; };
 		9AFED1BB278B7E09007802B9 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
 		A8D50982BBCD12BFFCDE3D30 /* Pods_A_Voz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_A_Voz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAAEC75DBF9F7A9BA41C1C6E /* Pods-AVoz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVoz.release.xcconfig"; path = "Target Support Files/Pods-AVoz/Pods-AVoz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A016651278E7E4A004EDAF2 /* ACarousel in Frameworks */,
 				D46F15B9F82CEAE730D097EE /* Pods_A_Voz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,8 +288,6 @@
 		DA8407BE51C5CC4A9762DB36 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7E69E737008686F3E36B16E1 /* Pods-AVoz.debug.xcconfig */,
-				CAAEC75DBF9F7A9BA41C1C6E /* Pods-AVoz.release.xcconfig */,
 				8A5667F9AA60290CCB1D9F1A /* Pods-A Voz.debug.xcconfig */,
 				50DD2FA28E40138F92877AFA /* Pods-A Voz.release.xcconfig */,
 			);
@@ -323,6 +321,9 @@
 			dependencies = (
 			);
 			name = "A Voz";
+			packageProductDependencies = (
+				9A016650278E7E4A004EDAF2 /* ACarousel */,
+			);
 			productName = AVoz;
 			productReference = 9A43AC7E277D2A6700F32EA5 /* A Voz.app */;
 			productType = "com.apple.product-type.application";
@@ -351,6 +352,9 @@
 				Base,
 			);
 			mainGroup = 9A43AC75277D2A6700F32EA5;
+			packageReferences = (
+				9A01664F278E7E4A004EDAF2 /* XCRemoteSwiftPackageReference "ACarousel" */,
+			);
 			productRefGroup = 9A43AC7F277D2A6700F32EA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -661,6 +665,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A01664F278E7E4A004EDAF2 /* XCRemoteSwiftPackageReference "ACarousel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JWAutumn/ACarousel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A016650278E7E4A004EDAF2 /* ACarousel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A01664F278E7E4A004EDAF2 /* XCRemoteSwiftPackageReference "ACarousel" */;
+			productName = ACarousel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A43AC76277D2A6700F32EA5 /* Project object */;
 }
