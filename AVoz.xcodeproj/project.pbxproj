@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A016651278E7E4A004EDAF2 /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 9A016650278E7E4A004EDAF2 /* ACarousel */; };
+		9A4039F227A722DE00711109 /* DetailContributorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4039F127A722DE00711109 /* DetailContributorView.swift */; };
 		9A43AC82277D2A6700F32EA5 /* AVozApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43AC81277D2A6700F32EA5 /* AVozApp.swift */; };
 		9A43AC86277D2A6900F32EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A43AC85277D2A6900F32EA5 /* Assets.xcassets */; };
 		9A43AC89277D2A6900F32EA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A43AC88277D2A6900F32EA5 /* Preview Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		50DD2FA28E40138F92877AFA /* Pods-A Voz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A Voz.release.xcconfig"; path = "Target Support Files/Pods-A Voz/Pods-A Voz.release.xcconfig"; sourceTree = "<group>"; };
 		8A5667F9AA60290CCB1D9F1A /* Pods-A Voz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A Voz.debug.xcconfig"; path = "Target Support Files/Pods-A Voz/Pods-A Voz.debug.xcconfig"; sourceTree = "<group>"; };
+		9A4039F127A722DE00711109 /* DetailContributorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContributorView.swift; sourceTree = "<group>"; };
 		9A43AC7E277D2A6700F32EA5 /* A Voz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A Voz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A43AC81277D2A6700F32EA5 /* AVozApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVozApp.swift; sourceTree = "<group>"; };
 		9A43AC85277D2A6900F32EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +63,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A4039ED27A722A500711109 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				9A4039EE27A722B200711109 /* Detail Contributor */,
+				9AFED1B6278B7A8F007802B9 /* Contributors */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		9A4039EE27A722B200711109 /* Detail Contributor */ = {
+			isa = PBXGroup;
+			children = (
+				9A4039F027A722C200711109 /* ViewModel */,
+				9A4039EF27A722BE00711109 /* View */,
+			);
+			path = "Detail Contributor";
+			sourceTree = "<group>";
+		};
+		9A4039EF27A722BE00711109 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A4039F127A722DE00711109 /* DetailContributorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A4039F027A722C200711109 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9A43AC75277D2A6700F32EA5 = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +255,7 @@
 		9A4C75F527851BDF00CB62B3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				9AFED1B6278B7A8F007802B9 /* Contributors */,
+				9A4039ED27A722A500711109 /* Team */,
 				9A43AC8F277D2A7600F32EA5 /* Home */,
 				9A43AC96277D2EB600F32EA5 /* About */,
 				9A43ACA0277D3BDF00F32EA5 /* News */,
@@ -449,6 +484,7 @@
 				9A55FE9F278BD27A00B86364 /* NewspaperViewModel.swift in Sources */,
 				9A55FEA3278BD2D200B86364 /* NewspaperView.swift in Sources */,
 				9A43AC9F277D3AD600F32EA5 /* PhaseView.swift in Sources */,
+				9A4039F227A722DE00711109 /* DetailContributorView.swift in Sources */,
 				9A43ACA4277D3C0D00F32EA5 /* NewsView.swift in Sources */,
 				9AD1E4D82781343A00B17AC0 /* Newspaper.swift in Sources */,
 				9A43AC95277D2B2200F32EA5 /* HomeView.swift in Sources */,

@@ -23,6 +23,9 @@ struct NewspaperView: View {
                     ForEach(viewModel.years, id: \.self) { year in
                         VStack {
                             Text(year)
+                                .font(.system(size: 28, weight: .bold))
+                                .padding(.top, 15)
+                                .foregroundColor(Color(#colorLiteral(red: 0, green: 0.6156862745, blue: 0.8941176471, alpha: 1)))
                             LazyVGrid(columns: columns, spacing: 20) {
                                 ForEach(viewModel.newspaper) { newspaper in
                                     if newspaper.year == year {
@@ -47,8 +50,14 @@ struct NewspaperView: View {
                     .progressViewStyle(CircularProgressViewStyle(tint: Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1))))
             }
         }
-        .navigationTitle("Jornais")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Image("AVOZ")
+                    .resizable()
+                    .frame(width: 60, height: 25)
+            }
+        }
         .onAppear {
             viewModel.loadData()
         }
@@ -77,28 +86,29 @@ private struct CardNewspaper: View {
         VStack {
             if let urlImage = URL(string: image) {
                 URLImage(url: urlImage, inProgress: { _ in
-                    Text("Carregando...")
+                    ProgressView("Carregando...")
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1))))
                         .frame(width: 150, height: 180)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
+                        .clipShape(Rectangle())
+                        .overlay(Rectangle().stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
                 }, failure: { _, _ in
                     Text("Erro: Não foi possível carregar imagem.")
                         .frame(width: 150, height: 180)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
+                        .clipShape(Rectangle())
+                        .overlay(Rectangle().stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
                 }, content: { image in
                     image
                         .resizable()
                         .frame(width: 150, height: 180)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
+                        .clipShape(Rectangle())
+                        .overlay(Rectangle().stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
                 })
-                Text("\(edicao)ª Edição - \(month)")
+//                Text("\(edicao)ª Edição - \(month)")
             } else {
                 Text("Imagem não disponível.")
                     .frame(width: 150, height: 180)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
+                    .clipShape(Rectangle())
+                    .overlay(Rectangle().stroke(Color(#colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)), lineWidth: 1))
             }
         }
     }

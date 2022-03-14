@@ -14,14 +14,14 @@ struct AVozApp: App {
         FirebaseApp.configure()
         let coloredNavAppearance = UINavigationBarAppearance()
         coloredNavAppearance.configureWithOpaqueBackground()
-        coloredNavAppearance.backgroundColor = #colorLiteral(red: 0, green: 0.6823529412, blue: 0.9176470588, alpha: 1)
+        coloredNavAppearance.backgroundColor = .white
         coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
         coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
-        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 0, green: 0.6156862745, blue: 0.8941176471, alpha: 1)
         UINavigationBar.appearance().standardAppearance = coloredNavAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
         let tintColor = UITabBarAppearance()
-        tintColor.selectionIndicatorTintColor = #colorLiteral(red: 0, green: 0.6818885207, blue: 0.9160618186, alpha: 1)
+        tintColor.selectionIndicatorTintColor = #colorLiteral(red: 0, green: 0.6156862745, blue: 0.8941176471, alpha: 1)
         UITabBar.appearance().standardAppearance = tintColor
         UITabBar.appearance().backgroundColor = .white
         UITabBar.appearance().unselectedItemTintColor = .black
